@@ -1,0 +1,70 @@
+.s-label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    
+    text-align: center;
+    
+    /* Dark Grey */
+    
+    color: #212244;
+}
+
+input[type=radio]{
+    accent-color: #00977C;
+}
+
+input[type=radio]:checked{
+    accent-color: #00977C;
+}
+
+::ng-deep {
+    .popover .arrow {
+        display: none;
+    }
+
+    .folder-pophover {
+        max-width: 550px !important;
+        width: auto !important;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+}
+
+.local-file {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #1E1F3E;
+}
+
+.file-card {
+    background: #FCFCFE;
+    border: 1px solid #B1B2BE;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.validBtn {
+    background-color: #01B798;
+    color: white;
+}
+
+.pii-card-body {
+    padding: 40px;
+}
+
+.term-length {
+    font-size: 11px;
+    color: red;
+    margin-left: 2px;
+}

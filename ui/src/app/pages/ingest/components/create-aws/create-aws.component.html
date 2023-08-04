@@ -1,0 +1,73 @@
+<div class="main-container">
+    <div class="page-header1">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item breadcrumb-top">
+                <ol class="breadcrumb">
+                    <!-- <li class="breadcrumb-item"><a [routerLink]="['/projects', projectId, 'ingest', 'select-source-type' ]">Dataset</a>
+                    </li> -->
+                    <li class="breadcrumb-item active" aria-current="page">AWS</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <div class="aws-div">
+        <p class="local-file">
+            <img class="img-fluid" alt="Responsive image" alt="Responsive image" src="assets/img/db-connectors/pgsql-img.svg">
+            AWS
+        </p>
+        <form [formGroup]="fg">
+            <div class="row gutters justify-content-center mt-5 rounded-lg ">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 ">
+                    <div class="card file-card">
+                        <div class="card-body pii-card-body">
+                            <div class="row gutters">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input cp" type="radio" name="inlineRadioOptions" 
+                                            [(ngModel)]="queryFolders" [value]="false" formControlName="markAsDefault">
+                                            <label class="form-check-label p2" for="inlineRadio1">AWS</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="inputName" class="p2">
+                                            <img class="img-fluid" alt="Responsive image" alt="Responsive image" src="assets/img/pii/folder-name.svg" alt="">
+                                            Data source name
+                                        </label>
+                                        <input type="text" class="form-control input-design" id="sourceName" #folder
+                                            formControlName="folderName" autocomplete="off" placeholder="Data source Name" >
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="inputName" class="p2">
+                                            <img class="img-fluid" alt="Responsive image" alt="Responsive image" src="assets/img/pii/folder-name.svg" alt="">
+                                            Select a policy
+                                        </label>
+                                        <select class="form-control input-design" formControlName="policyName" #policyName
+                                            (change)="onSelectPipeline(policyName.value)" [(ngModel)]="selectedPolicyName">
+                                            <option value="" [value]="undefined" disabled selected > --Select Policy-- </option>
+                                            <option *ngFor="let item of policyData" [value]="item.policyName">
+                                                {{item.policyName}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 text-center mt-2">
+                                    <button type="button" class="btn btn-design" [disabled]="fg.invalid"
+                                    [ngClass]="{'validBtn': !fg.invalid}">CONTINUE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</div>

@@ -20,6 +20,7 @@ import { CompleteDatabaseCreationComponent } from './components/complete-databas
 import { DatasetListComponent } from './components/dataset-list/dataset-list.component';
 import { FolderDatasetComponent } from './components/folder-dataset/folder-dataset.component';
 import { ViewIngestPipelineComponent } from './components/view-ingest-pipeline/view-ingest-pipeline.component';
+import { CreateAwsComponent } from './components/create-aws/create-aws.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,7 @@ const routes: Routes = [
   { path: 'source-data', component: SourceDataComponent },
   { path: 'view', component: ViewIngestComponent },
   { path: 'select-source-type', component: SelectSourceTypeComponent },
+  { path: 'aws', component: CreateAwsComponent },
   {
     path: '',
     component: WizardFolderComponent,
