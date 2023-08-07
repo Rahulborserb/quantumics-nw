@@ -329,23 +329,10 @@
 	</dependencies>
 
 	<build>
-		<pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<dependencies>
-					<dependency>
-						<groupId>org.codehaus.plexus</groupId>
-						<artifactId>plexus-archiver</artifactId>
-						<exclusions>
-							<exclusion>
-								<groupId>org.apache.commons</groupId>
-								<artifactId>commons-compress</artifactId>
-							</exclusion>
-						</exclusions>
-					</dependency>
-				</dependencies>
 			</plugin>
 			<plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
@@ -353,7 +340,6 @@
                 <version>3.4.0.905</version>
             </plugin>
 		</plugins>
-		</pluginManagement>
 		<finalName>QuantumSparkServiceAPI</finalName>
 		<resources>
 			<resource>
