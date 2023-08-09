@@ -48,6 +48,7 @@ import { FolderDatasetComponent } from './components/folder-dataset/folder-datas
 import { DeleteFolderDatasetComponent } from './components/delete-folder-dataset/delete-folder-dataset.component';
 import { ViewIngestPipelineComponent } from './components/view-ingest-pipeline/view-ingest-pipeline.component';
 import { CreateAwsComponent } from './components/create-aws/create-aws.component';
+import { ListAwsComponent } from './components/list-aws/list-aws.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +93,7 @@ import { CreateAwsComponent } from './components/create-aws/create-aws.component
     DeleteFolderDatasetComponent,
     ViewIngestPipelineComponent,
     CreateAwsComponent,
+    ListAwsComponent,
   ],
   imports: [
     CommonModule,

@@ -77,7 +77,7 @@ export class SelectSourceTypeComponent implements OnInit {
   }
 
   public redirectToCloud(): void {
-    this.router.navigate([`projects/${this.projectId}/ingest/aws`]);
+    this.router.navigate([`projects/${this.projectId}/ingest/generate-aws`]);
   }
 
   private redirectToCreateDb(): void {

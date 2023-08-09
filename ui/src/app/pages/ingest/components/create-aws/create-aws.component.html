@@ -26,7 +26,7 @@
                                     <div class="form-group">
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input cp" type="radio" name="inlineRadioOptions" 
-                                            [(ngModel)]="queryFolders" [value]="false" formControlName="markAsDefault">
+                                            [(ngModel)]="queryFolders" [value]="true" formControlName="markAsDefault">
                                             <label class="form-check-label p2" for="inlineRadio1">AWS</label>
                                         </div>
                                     </div>
@@ -57,10 +57,24 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
+                                *ngIf="fg.get('policyName').valid && fg.get('policyName').dirty">
+                                    <div class="form-group">
+                                        <label for="inputName" class="p2">
+                                            <img class="img-fluid" alt="Responsive image" alt="Responsive image" src="assets/img/pii/folder-name.svg" alt="">
+                                            Role name
+                                        </label>
+                                        <input type="text" class="form-control input-design" id="sourceName" #folder
+                                            formControlName="roleName" autocomplete="off" placeholder="Role Name" >
+                                    </div>
+                                </div>
 
-                                <div class="col-12 text-center mt-2">
+                                <div class="col-12 mt-2">
                                     <button type="button" class="btn btn-design" [disabled]="fg.invalid"
-                                    [ngClass]="{'validBtn': !fg.invalid}">CONTINUE</button>
+                                    [ngClass]="{'validBtn': !fg.invalid}" (click)="testConnection()">Test Connection</button>
+
+                                    <button type="button" class="btn btn-design mr-l-10" [disabled]="!connection"
+                                    [ngClass]="{'validBtn': !fg.invalid}">Connect</button>
                                 </div>
                             </div>
                         </div>

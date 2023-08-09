@@ -25,7 +25,7 @@ export class CreateAwsComponent {
   public policyData: any = [
     {
       id: 1,
-      policyName: "I Am Role",
+      policyName: "IAM",
     },
     {
       id: 2,
@@ -36,6 +36,7 @@ export class CreateAwsComponent {
       policyName: "Secret Key / Access Key"
     }
   ];
+  public connection: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -59,9 +60,9 @@ export class CreateAwsComponent {
 
     this.fg = this.fb.group({
       folderName: new FormControl('', Validators.required),
-      folderDesc: new FormControl('', Validators.required),
       markAsDefault: [false],
       policyName: new FormControl('', Validators.required),
+      roleName: new FormControl('', Validators.required),
     });
   }
 
@@ -70,4 +71,8 @@ export class CreateAwsComponent {
 
   }
 
+  public testConnection(): void {
+    this.snakbar.open("Test connection succesfully");
+    this.connection = true;
+  }
 }

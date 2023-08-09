@@ -21,6 +21,7 @@ import { DatasetListComponent } from './components/dataset-list/dataset-list.com
 import { FolderDatasetComponent } from './components/folder-dataset/folder-dataset.component';
 import { ViewIngestPipelineComponent } from './components/view-ingest-pipeline/view-ingest-pipeline.component';
 import { CreateAwsComponent } from './components/create-aws/create-aws.component';
+import { ListAwsComponent } from './components/list-aws/list-aws.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
       {
         path: 'pipelines',
         component: ListPipelinesComponent
+      },
+      {
+        path: 'aws',
+        component: ListAwsComponent
       },
       { 
         path: 'pipelines/dataset/:pipelineId/:folderId',
@@ -62,7 +67,7 @@ const routes: Routes = [
   { path: 'source-data', component: SourceDataComponent },
   { path: 'view', component: ViewIngestComponent },
   { path: 'select-source-type', component: SelectSourceTypeComponent },
-  { path: 'aws', component: CreateAwsComponent },
+  { path: 'generate-aws', component: CreateAwsComponent },
   {
     path: '',
     component: WizardFolderComponent,

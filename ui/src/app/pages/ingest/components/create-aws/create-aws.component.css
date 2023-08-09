@@ -68,3 +68,7 @@ input[type=radio]:checked{
     color: red;
     margin-left: 2px;
 }
+
+.mr-l-10 {
+    margin-left: 10px;
+}
