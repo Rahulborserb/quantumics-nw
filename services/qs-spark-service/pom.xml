@@ -15,7 +15,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.0</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.quantumspark</groupId>
 	<artifactId>api</artifactId>
@@ -315,7 +315,7 @@
          <dependency>
     		<groupId>com.opencsv</groupId>
     		<artifactId>opencsv</artifactId>
-    		<version>5.7.1</version>
+    		<version>5.11</version>
 		</dependency>
         <dependency>
 			<groupId>org.apache.poi</groupId>
